@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Metodologías y modelado de software</title>
+        <meta meta name="description" content="El desarrollo de un proyecto de software requiere de la definición de unos requerimientos por parte del interesado (el usuario, el cliente) que deben ser analizados siguiendo una metodología de software, que puede ser la tradicional o la metodología ágil una de las más usada en la actualidad.  Para emplear estas metodologías se deben tener en cuenta elementos, diagramas, modelos (artefactos) que se especifican en cada una de las fases del proyecto.">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link text-white" href="#ResultadosAprendizaje"><span>Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link text-white" href="#IndiceTematico"><span>Índice temático</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link text-white" href="#Creditos"><span>Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">Tecnología en análisis y desarrollo de software</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Metodologías y modelado de software</h1>
+                                <div class="brand-line-primary"></div>
+                                <p class="curso-descripcion">El desarrollo de un proyecto de software requiere de la definición de unos requerimientos por parte del interesado (el usuario, el cliente) que deben ser analizados siguiendo una metodología de software, que puede ser la tradicional o la metodología ágil una de las más usada en la actualidad. Para emplear estas metodologías se deben tener en cuenta elementos, diagramas, modelos (artefactos) que se especifican en cada una de las fases del proyecto.</p>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li><span>220501093-01 Planear actividades de análisis de acuerdo con la metodología seleccionada.</span></li>
+                            <li><span>220501093-02 Modelar las funciones del software de acuerdo con el informe de requisitos.</span></li>
+                            <li><span>220501093-04 Verificar los modelos realizados en la fase de análisis de acuerdo con lo establecido en el informe de requisitos.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-file-text-o"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#intro">Introducción</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#intro">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">DEsarrollo de software</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Requerimientos funcionales de software</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">3</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-3">El lenguaje unificado de modelado (UML)</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-3">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">4</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-4">Construcción de diagramas UML</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-4">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">5</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-5">Evaluación del informe de requisitos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-5">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="intro">
+                <div class="container" id="intro">
+                    <div class="header-ecored">
+                        <h1>Introducción</h1>
+                    </div>
+                    <div class="card shadow"><img class="img-fluid" src="assets/images/pages/ilustraciones/img1.png" style="max-width: 100%">
+                        <div class="card-body">
+                            <p>Para el desarrollo de un software, es necesario realizar una contextualización de los diferentes temas que se abordarán en este componente formativo. Es esencial conocer los elementos principales para este proceso, las fases en que se desarrollan, las metodologías que se han venido trabajando y las que actualmente tienen mayor fuerza (métodologías ágiles), las cuales permiten obtener un software de alta calidad, se detallarán los requerimientos funcionales, como los no funcionales; los cuales son esenciales para que se cumpla en gran medida el éxito del desarrollo del proceso. De esta forma se pretende alcanzar los resultados de aprendizaje dispuestos en este material como son planear las actividades de un proceso de software, determinar los requisitos funcionales del software, utilizar los diagramas UML para visualizar el sistema desde varias perspectivas, modelar datos a través de una base de datos relacional y evaluar la utilidad y beneficios de los artefactos sugeridos por una metodología de desarrollo de software.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-1">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>1. Desarrollo de software</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <div class="sub-ecored" id="11">
+                            <h2>1.1 Concepto </h2>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img2.png"></div>
+                            <div class="col">
+                                <p>El proceso de software trata todos los aspectos del desarrollo de software, desde la primera etapa de la especificación de requerimientos hasta el mantenimiento del sistema después de que se pone en marcha. La mayoría de las organizaciones han diseñado sus propios procesos de desarrollo de software. </p>
+                            </div>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>¿Qué es el proceso del software? </h3>
+                        </div>
+                        <p class="mt-5">Según el SWEBOK © el proceso del software son todas las actividades llevadas a cabo por los ingenieros de software para desarrollar, mantener y operar software. Estas actividades incluyen: levantamiento de requerimientos, diseño, construcción, pruebas, configuración, entre otras. (Bourque,2014).</p>
+                        <p>Es este enfoque el que hace que el desarrollo de software pase de ser una tarea artesanal a un proceso industrial más sistemático, cuantificable y predecible.</p>
+                        <p>Sin este enfoque de proceso industrial sería muy difícil construir sistemas complejos como por ejemplo un sistema autorizador de pagos o un sistema de punto de venta (POS), entre otros. </p>
+                        <div class="jumbotron color-1">
+                            <h3 class="color-t-1">La crisis del software </h3>
+                            <p>A finales del la década de los sesentas la industria del software llegó a la conclusión que la complejidad del mismo y la creciente demanda por un número mayor de aplicaciones superaba las habilidades y conocimientos que los programadores tenían en ese momento.</p>
+                            <p>Lo anterior era un corolario de los problemas más comunes que se presentaban en los proyectos informáticos a saber:</p>
+                            <div class="row justify-content-center align-items-stretch mt-5">
+                                <div class="col-4 mx-2 bg-white border"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img3.png">
+                                    <p class="text-center mt-2">El software quedaba inconcluso o el proyecto era abandonado.</p>
+                                </div>
+                                <div class="col-4 mx-2 bg-white border"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img4.png">
+                                    <p class="text-center mt-2">El software tomaba más tiempo y costaba más de lo estimado. </p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-stretch mt-5">
+                                <div class="col-4 mx-2 bg-white border"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img5.png">
+                                    <p class="text-center mt-2">Una vez creado el software era imposible o muy costoso darle mantenimiento.</p>
+                                </div>
+                                <div class="col-4 mx-2 bg-white border"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img6.png">
+                                    <p class="text-center mt-2">El software no cumplía con las expectativas del cliente. </p>
+                                </div>
+                            </div>
+                            <p class="mt-5">Las anteriores conclusiones fueron compiladas en una conferencia de la OTAN llevaba a cabo en Alemania (NATO,1968) donde por primera vez se usó el término “Ingeniería del Software”.</p>
+                            <p>A partir de entonces la ingenería del software es reconocida como una disciplina independiente cuyas técnicas y procedimientos han permitido a este proceso llegar a los niveles que hoy en día se tienen. </p>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>La ingeniería del software </h3>
+                        </div>
+                        <p>Es la aplicación de un enfoque sistemático, disciplinado y cuantificable al desarrollo, operación y mantenimiento del software (BOURQUE, 2014).</p>
+                        <p>Se puede decir que la ingeniería del software se encarga de aplicar técnicas usadas en otras ámbitos de la ingeniería para lograr desarrollar productos de software que cumplan con los requerimientos del cliente, estén dentro del presupuesto y tengan la duración estimada sin importar su complejidad. </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img7.png"></div>
+                            <div class="col">
+                                <p>La ingeniería del software es promovida por la Computer Society (www.computer.org) de la IEEE quienes han creado el SWEBOK (Software Enginieering Body of Knowledge) que se considera la biblia de esta disciplina porque engloba sistemáticamente los diferentes autores, contenidos, técnicas y mejores prácticas de la disciplina en un solo libro. </p>
+                            </div>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img8.png">
+                        <div class="sub-ecored mt-5" id="12">
+                            <h2>1.2 Proceso de desarrollo de software</h2>
+                        </div>
+                        <p>Para aplicar un enfoque sistemático al proceso de software se ha propuesto una serie de actividades que pueden variar según el autor en las siguientes (PRESSMAN, 2010): comunicación, planeación, modelado, construcción y despliegue.</p>
+                        <p>En su conjunto estas etapas conformarán lo que se conoce como el ciclo de vida del software. </p>
+                        <p>Estas actividades estructurales o fundamentales van acompañadas o apoyadas de otras actividades transversales o sombrilla (PRESSMAN, 2010) que ocurren a lo largo del proceso del software. Ejemplo de estas actividades son: aseguramiento de la calidad, administración de riesgos y gerencia de proyecto, entre otras. </p>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Actividades de un proceso de software</h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img9.png">
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>a. Especificación de requerimientos</h3>
+                        </div>
+                        <p>En esta fase los interesados en el proyecto o stakeholders acuerdan y establecen los requerimientos que el software como producto debe cumplir.</p>
+                        <p>Esta actividad se puede descomponer en las siguientes etapas (SOMMERVILLE,2005): </p>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/1.png"></figure>
+                                        <h3 class="color-t-1">Obtención de requerimientos</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">En esta etapa se hace un inventario de los requerimientos que debe cumplir el software a desarrollar. Se apoya en entrevistas, cuestionarios, recolección de datos a los interesados claves del proyecto. Al final estos requerimientos son consolidados para entregarlos a la siguiente etapa. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/2.png"></figure>
+                                        <h3 class="color-t-1"> Análisis de requerimientos</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">En esta etapa se determina si un requerimiento es viable dentro de las restricciones tecnológicas, de costo y tiempo que tienen todos los proyectos. El analista deberá entender muy bien el requerimiento y asegurar que el mismo sea único, medible y alcanzable, entre otros. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/3.png"></figure>
+                                        <h3 class="color-t-1">Especificación de requerimientos</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">Una vez analizado el requerimiento ha sido individualizado se procede a realizar la especificación formal de manera que pueda ser socializado con todos los interesados del proyecto.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/4.png"></figure>
+                                        <h3 class="color-t-1">Validación de requerimientos</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">En esta etapa se procede a validar que los requerimientos cumplan con las características inherentes como son: no redundante, completo, alcanzable, entre otros. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Las anteriores etapas no necesariamente se deben hacer secuencialmente sino que se pueden hacer en forma iterativa (Figura 2), es decir, que un mismo requerimiento puede ser varias veces analizado, especificado o validado con el objeto que el conjunto de requerimientos finales sean más coherentes, no redundantes, completos y que cumplan con el objeto del desarrollo del software. (SOMMERVILLE, 2005).</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img10.png">
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>b. Planeación</h3>
+                        </div>
+                        <p>En esta etapa se especifica un plan para el proyecto que guiará a todos los interesados (stakeholders ) a conseguir el producto especificado en la primera fase.</p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col">
+                                <p>Según Pressman la actividad de planeación es “un conjunto de prácticas administrativas y técnicas que permiten que el equipo de software defina un mapa mientras avanza hacia su meta estratégica y objetivos tácticos” (PRESSMAN, 2010).</p>
+                                <p>Hoy en día los proyectos de desarrollo de software empresarial se están apoyando en los principios y prácticas proporcionados por el PMBOK del Project Management Institute (PMI) . </p>
+                            </div>
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img11.png"></div>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>c. Modelado</h3>
+                        </div>
+                        <p>En esta etapa los analistas o ingenieros de software crean un modelo abstracto del sistema a construir basado en los requerimientos funcionales y no funcionales planteados en la fase de especificación de requerimientos. Este modelo proporciona detalles sobre arquitectura del software, estructuras de datos, interfaces y componentes que se necesitan para implementar el sistema (PRESSMAN, 2010).</p>
+                        <p>Son actividades propias de esta fase las siguientes (SOMMERVILLE, 2005): </p>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/1.png"></figure>
+                                        <h3 class="color-t-1">Diseño de la arquitectura</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">Se identifican y documentan los subsistemas que forman el sistema y sus relaciones. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/2.png"></figure>
+                                        <h3 class="color-t-1"> Especificación abstracta del sistema</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">Para cada subsistema se produce una especificación abstracta de sus servicios y las restricciones sobre las cuales debe funcionar. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/3.png"></figure>
+                                        <h3 class="color-t-1">Diseño de interfaces</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">Para cada subsistema se diseña y documenta su interfaz con otros subsistemas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/4.png"></figure>
+                                        <h3 class="color-t-1">Diseño de componentes</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">Se asignan servicios a los componentes y se diseñan sus interfaces.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/5.png"></figure>
+                                        <h3 class="color-t-1">Diseño de las estructuras de datos</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">Se diseña en detalle y se especifica la estructura de datos que se utilizará en la implementación del sistema.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card-media color-1 py-4 px-5">
+                                    <div class="card-media__body">
+                                        <figure class="card__figure"><img class="img-fluid" src="assets/images/pages/ilustraciones/6.png"></figure>
+                                        <h3 class="color-t-1">Diseño de algoritmos</h3>
+                                        <hr>
+                                        <p class="mb-0 mt-3">Se diseñan en detalle y se especifican los algoritmos utilizados para proporcionar los servicios. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>d. Desarrollo</h3>
+                        </div>
+                        <p>En esta actividad ,también llamada construcción, se genera el código fuente en el lenguaje o lenguajes de programación seleccionados para el proyecto. El entregable de esta actividad además del código puede ser también un conjunto de parámetros o parametrización de software.</p>
+                        <p>Son actividades de esta etapa las siguientes: </p>
+                        <div class="row justify-content-center align-items-stretch mt-5">
+                            <div class="col-4 mx-2 color-1 border"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img12.png">
+                                <h3 class="text-center mt-3">Codificación</h3>
+                                <p class="text-center mt-2">Una vez creado el software era imposible o muy costoso darle mantenimiento.</p>
+                            </div>
+                            <div class="col-4 mx-2 color-1 border"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img13.png">
+                                <h3 class="text-center mt-3">Pruebas unitarias </h3>
+                                <p class="text-center mt-2">El software no cumplía con las expectativas del cliente. </p>
+                            </div>
+                        </div>
+                        <p class="mt-5">Esta actividad se puede apoyar también en herramientas de cuarta generación o CASE que generan código a partir de una especificación formal. Un ejemplo de este tipo de herramientas es GENEXUS (www.genexus.com) producida por una empresa uruguaya de software.</p>
+                        <p>También se pueden usar sistemas integrados de desarrollo o IDE’s como ECLIPSE (www.eclipse.org) o Microsoft Visual Studio Code, entre otros.</p>
+                        <p>En esta etapa es importante seguir algunos principios de programación (PRESSMAN, 2010): </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-11">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>1 </span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top">Reducir la complejidad.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>2 </span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top">Anticiparse a la diversidad o cambios.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>3 </span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top">Facilitar las pruebas de software.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__bulletNumber"><span>4 </span></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top">Ajustarse a la normatividad vigente para el sistema a desarrollar. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>e. Implantación</h3>
+                        </div>
+                        <p>En esta fase se lleva a cabo la puesta en marcha o salida en vivo del producto de software desarrollado una vez los requerimientos son validados y aceptados por el cliente. </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col bg-1">
+                                <p class="mb-0">Antes de la puesta en marcha se realiza una validación y prueba del software que consta de las siguientes actividades (SOMMERVILLE, 2005): </p>
+                            </div>
+                            <div class="col-auto"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img14.png"></div>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col bg-2">
+                                <p class="mb-0">Posterior a la salida en vivo se pueden presentar situaciones que requieran algunas de las siguientes actividades propias del mantenimiento del software:</p>
+                            </div>
+                            <div class="col-auto"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img15.png"></div>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img8.png">
+                        <div class="sub-ecored mt-5" id="13">
+                            <h2>1.3 Metodologías tradicionales </h2>
+                        </div>
+                        <p>También llamadas modelos de procesos de software son representaciones simplificadas de un proceso, se utilizan para explicar las diferentes perspectivas del desarrollo de software. </p>
+                        <div class="jumbotron color-1">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-auto"><img class="my-4 img-a img-fluid" src="assets/images/pages/ilustraciones/img17.png"></div>
+                                <div class="col">
+                                    <h3 class="color-t-1">Modelos de procesos de software </h3>
+                                    <p>Las actividades del proceso de software vistas en el numeral anterior fueron en un principio secuenciales y formaron parte del modelo en Cascada (PRESSMAN, 2010). </p>
+                                    <p>Sin embargo en la medida que los sistemas se hicieron más complejos surgieron nuevos enfoques como el modelo en espiral o modelos ágiles que pretendían disminuir costos o afrontar los riesgos e incertidumbres propios de los sistemas actuales donde los requerimientos no siempre están totalmente especificados o son muy susceptibles a cambios.</p>
+                                    <p>El programa ADSI se guiará por este modelo de procesos en cascada, no obstante, se exponen otros modelos a manera de ejemplo para que el estudiante tenga una visión más amplia y pueda profundizar más adelante. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>a. Modelo en cascada </h3>
+                        </div>
+                        <p>En este modelo las etapas del proceso a saber: especificación de requerimientos, modelado, desarrollo e implantación se dan de manera secuencial.</p>
+                        <p>Este fue el primer modelo propuesto y sigue siendo el padre de los demás modelos de procesos.(PRESSMAN, 2010).</p>
+                        <p>Este modelo es apropiado cuando los requerimientos de un sistema están claramente definidos con anticipación y no se espera que cambien en el transcurso de las demás etapas.</p>
+                        <p>Su ventaja es que contempla toda la funcionalidad del sistema desde un principio. </p>
+                        <p>Su desventaja es que los cambios posteriores o inclusión de nuevos requerimientos son muy costosos porque impactan todas las fases llevadas a cabo con anterioridad.</p>
+                        <p>Por otra parte toma tiempo importante del equipo la formalización o documentación de cada actividad una vez se finaliza. </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/bien.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Ventaja </h3>
+                                    <p class="mb-0 text-center">Contempla toda la funcionalidad del sistema desde un principio. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/mal.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Desventaja </h3>
+                                    <p class="mb-0 text-center">Cambios posteriores o inclusión de nuevos requerimientos son muy costosos porque impactan todas las fases llevadas a cabo con anterioridad. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Modelo en cascada</h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img18.png">
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>b. Modelos incrementales</h3>
+                        </div>
+                        <p>Este modelo está pensado para cuando se requiere entregar un producto de software con una funcionalidad reducida que posteriormente se va incrementando hasta llegar finalmente a la versión deseada del producto. Los requerimientos nuevos que se van agregando en cada entrega se denominan incrementos.</p>
+                        <p>Un ejemplo de este tipo es el modelo en espiral (PRESSMAN, 2010). </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/bien.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Ventaja </h3>
+                                    <p class="mb-0 text-center">Cuenta con un producto básico pero funcional en un tiempo menor comparado con el modelo en cascada. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/mal.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Desventaja </h3>
+                                    <p class="mb-0 text-center">Algunos clientes temen que este proceso evolutivo de entregas se salga de control. (PRESSMAN, 2010). </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Modelo en espiral Fuente: Pressman (2010) </h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img19.png">
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>c. Modelo de evolución de prototipos</h3>
+                        </div>
+                        <p>Este modelo se apoya en los llamados prototipos o versiones primarias del producto de software al cual se quiere llegar. Estos prototipos evolucionan o se mejoran cada vez que se aplican las actividades del proceso de software: especificación, planeación, modelado, desarrollo, implantación. Lo anterior es llamado una iteración ( Figura 5 ).</p>
+                        <p>La diferencia con el modelo incremental es que un prototipo se puede descartar por completo e iniciar con uno nuevo en cualquier etapa del proceso evolutivo o iterativo.</p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/bien.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Ventaja </h3>
+                                    <p class="mb-0 text-center">Desde el primer prototipo ya se puede tener la realimentación del cliente y se pueden corregir en etapas muy tempranas cualquier falencia que se presente. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/mal.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Desventaja </h3>
+                                    <p class="mb-0 text-center">No se puede estimar fácilmente el tiempo de finalización del proyecto. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Modelo en espiral Fuente: Pressman (2010) </h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img20.png">
+                        <div class="sub-ecored mt-5" id="14">
+                            <h2>1.4 Metodologías ágiles </h2>
+                        </div>
+                        <div class="jumbotron color-1">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-auto"> <img class="img-a my-3 img-fluid" src="assets/images/pages/ilustraciones/img21.png"></div>
+                                <div class="col">
+                                    <p>Las metodologías ágiles, se han presentado como una solución a los problemas en el desarrollo de proyectos de software, que a lo largo del tiempo han venido presentando situaciones como: baja calidad, tiempos demasiado largos para desarrollar proyectos, han hecho que se busquen soluciones eficaces para las empresas. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Recientemente se han popularizado los modelos ágiles que combinan las estrategias de los modelos en cascada, incremental y prototipos.</p>
+                        <p>Un ejemplo es el modelo SCRUM que está basado en el modelo incremental pero plantea, entre otros, unas técnicas o criterios para determinar cuando pasar a una siguiente versión del producto de software.</p>
+                        <p>Estos modelos son apropiados cuando se anticipa que van a surgir cambios en los requerimientos a lo largo del proyecto y pretenden disminuir este impacto por un lado haciendo más liviano o ligero la formalización de las etapas del proceso del software y por otro haciendo énfasis en equipos de trabajo bastante cohesionados y motivados. (PRESSMAN, 2010). </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/mal.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Desventaja </h3>
+                                    <p class="mb-0 text-center">Estas metodologías requieren un entrenamiento y disciplina en los equipos de trabajo que no es accesible para todas las empresas. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Modelo SCRUM </h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img22.png">
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>Modelo basado en componentes </h3>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col">
+                                <p>Este modelo se apoya en software previamente desarrollado que se puede incorporar, parametrizar o configurar al proyecto en desarrollo y de este forma disminuir la cantidad de código a producir.</p>
+                                <p>Algunos softwares modernos como SAP, ORACLE, SIESA, entre otros, suministran componentes para una amplia gama de procesos de negocio (contabilidad, nómina, inventarios, entre otros) los cuales se configuran de acuerdo a las necesidades específicas del cliente. Lo anterior evita que la actividad de desarrollo se haga desde cero y los desarrollos se realizan para llenar las brechas o “gaps” entre la funcionalidad que requiere el cliente y lo ofrecido por el proveedor.</p>
+                                <p>Los componentes también pueden ser proporcionados a través de “frameworks” o librerías que también son código ya elaborado y que puede ser configurado, utilizado y en algunos casos modificado en esta fase de desarrollo. Ejemplo de estos frameworks son J2EE, Microsoft .Net, Laravel (PHP), AngularJS, entre otros.</p>
+                            </div>
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img23.png"></div>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/mal.png"></div>
+                            <div class="col">
+                                <div class="jumbotron bg-11 mb-0">
+                                    <h3 class="text-center color-t-1">Desventaja </h3>
+                                    <p class="mb-0 text-center">No siempre el componente o módulo cumple con todos los requerimientos del cliente y en algunos casos las empresas limitan o disminuyen los requerimientos en favor de una mayor prontitud en la entrega del producto de software especificado. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>El proceso unificado </h3>
+                        </div>
+                        <p>Este proceso se basa en los modelos tradicionales ya expuestos como son cascada, prototipos e incrementales y hace énfasis en la utilización de casos de uso apoyados en el lenguaje UML para modelar los requerimientos del cliente (PRESMAN, 2010). </p>
+                        <p>Está compuesto por cuatro fases: Concepción, elaboración, construcción y transición.</p>
+                        <p>Al igual que los modelos ágiles el proceso unificado también afronta el desafío del cambio constante de los requerimientos y requiere de un entrenamiento al equipo de proyecto que no todas las empresas pueden acceder. </p><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img24.png">
+                        <p class="mt-5">Lea sobre programación extrema (XP) que integra un rango de buenas prácticas de programación, en el capítulo 3, págs. 64-68 del siguiente libro:</p>
+                        <div class="jumbotron color-1">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-12 col-md-6"><a href="https://login.bdigital.sena.edu.co/login?url=https://elibro.net/es/ereader/senavirtual/56294"> <img class="img-a my-3 img-fluid" src="assets/images/pages/ilustraciones/img25.png"></a></div>
+                                <div class="col-12 col-md-6"><img class="img-a my-3 img-fluid" src="assets/images/pages/ilustraciones/img26.png"></div>
+                            </div>
+                        </div>
+                        <div class="sub-ecored mt-5" id="15">
+                            <h2>1.5 Herramientas CASE </h2>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col">
+                                <p>CASE (Computer Aided Software Engineering) son herramientas que pueden ayudar al analista a mejorar su trabajo, disminuyendo el tiempo de desarrollo de software y el costo, a cambio se aumenta la calidad del software y la productividad de quienes lo están desarrollando. Ver más información en el capítulo 1, pags. 30-32 del libro: </p>
+                            </div>
+                            <div class="col-auto"><a href="https://login.bdigital.sena.edu.co/login?url=https://elibro.net/es/ereader/senavirtual/56294"> <img class="img-a my-3 img-fluid" src="assets/images/pages/ilustraciones/img27.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>2. Requerimientos funcionales de software</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <div class="sub-ecored" id="21">
+                            <h2>2.1 Origen</h2>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img28.png"></div>
+                            <div class="col">
+                                <p>Los requisitos funcionales se recolectan en los casos de uso, detallan que debe realizar el software para sus usuarios: aceptar, verificar y registrar datos, transformarlos, presentarlos, etc. </p>
+                            </div>
+                        </div>
+                        <div class="sub-ecored-teme mt-5">
+                            <h3>Introducción al UML </h3>
+                        </div>
+                        <p>El lenguaje unificado de modelado (UML) nació de la unión de los métodos análisis y diseño orientado a objetos a finales de la década de 1980 principios de la década de 1990. Unifica los métodos de los siguientes autores Booch, Rumbaught y Jacobson. El UML es un lenguaje de modelado y no corresponde a un método de desarrollo de software o una técnica para el desarrollo de software. Es totalmente gráfico y en él se expresan los diseños del software desde la identificación de requerimientos hasta el diseño de interfaces y clases. A través de él se pueden esquematizar la estructura y el comportamiento del software.</p>
+                        <p>Dentro de la esquematización de la estructura se encuentran los diagramas de casos de uso. El proceso unificado de desarrollo de software obtenido mediante la unión de los tres autores (Booch, Jacobson, Rumbaught), está centrado en los casos de uso, de ahí la importancia del lenguaje unificado de modelado que complementa, no sólo este modelo de proceso de desarrollo de software sino todos los modelos que quieran utilizarlo. </p>
+                        <p>El UML también permite documentar todos los procesos de desarrollo del software, se comporta como un lenguaje común entre el cliente y el analista, donde a través de gráficos se representa lo que finalmente el cliente requiere. </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img29.png"></div>
+                            <div class="col">
+                                <p>En definitiva el UML es una herramienta para analistas funcionales (los que definen, lo que el programa debe hacer) y analistas programadores (los que construyen a través de programas esas funcionalidades), es un estándar en la industria del software aprobado por la ISO/IEC 19501:2005 Information Technology Open Distributed Processing Unified Modeling Language, que lo usan las empresas de medianos o grandes equipos de analistas y desarrolladores cuyo objetivo es analizar, planificar y documentar todo un proyecto de software. </p>
+                            </div>
+                        </div>
+                        <div class="sub-ecored mt-5" id="22">
+                            <h2>2.2 Casos de uso </h2>
+                        </div><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img30.png">
+                        <p class="mt-5">Los casos de uso describen las funcionalidades de los sistemas desde la visión del usuario. Se utilizan para mostrar la funcionalidad que el sistema que se está diseñando y que ofrecerá y que usuarios se comunicaran con el sistema para usar dicha funcionalidad. Es una técnica que consiste en hacer un diagrama con su respectiva notación. </p>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Ejemplo de diagramas de casos de uso</h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img31.png">
+                        <p class="mt-5">También se denomina como el modelo de requisitos y complementa los requerimientos de un sistema software a desarrollar. Los casos de uso describen la funcionalidad que ofrecerá el sistema desde la perspectiva del usuario definiendo el ámbito del sistema y el conocimiento por parte del diseñador de lo que el usuario requiere. La descripción del caso de uso ofrece una interacción entre el usuario y el sistema. Estas descripciones están en forma de resumen o en forma más detallada en donde esta interacción se describe paso a paso.</p>
+                        <div class="sub-ecored mt-5" id="23">
+                            <h2>2.3 Notación </h2>
+                        </div>
+                        <p>De acuerdo con el estándar en la norma ISO/IEC 19501: 2005 los diagramas de caso de uso muestran tres aspectos del sistema: los actores, los casos de uso y los límites del sistema o subsistema. </p>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Notación de los casos de uso</h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img32.png">
+                        <p class="mt-5">Los actores representan el rol que los usuarios, dispositivos u otros sistemas realizan cuando se comunican con el caso de uso particular del sistema. </p>
+                        <p>Al momento de determinar los casos de uso se hace necesario identificar el actor. El actor es el nombre que se le da al usuario cuando desempeña ese papel. En figura anterior el actor es el Administrador, es un usuario que desempeña el rol de administrador. Los actores llevan a cabo los casos de uso. Un actor puede realizar varios casos de uso y un caso de uso puede ser realizado por varios actores. </p>
+                        <p>Para identificar un actor solo es necesario visualizar los roles que interactuaran en el sistema. </p>
+                        <div class="sub-ecored mt-5" id="24">
+                            <h2>2.4 Documentación </h2>
+                        </div>
+                        <p>Los requerimientos funcionales deben documentarse por escrito para que puedan ser entendidos tanto por el analista como por el usuario final, para esto se utilizan herramientas que a través de diagramas y documentación de procesos, se crean planos similares a los que construyen los arquitectos para una obra de construcción. </p>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Notación de los casos de uso</h3>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img33.png">
+                        <p class="mt-5">Los analistas se pueden apoyar en software para generar los casos de uso y documentarlos. </p>
+                        <p>Para el desarrollo de este contenido se presenta el software Star UML, el cual incluye todos los diagramas de estructura y comportamiento del UML, adicionalmente en su última versión incluye la elaboración de diagramas de entidad relación y soporta la ingeniería inversa.</p>
+                        <p>Para descargar la versión gratuita de este software el aprendiz debe ingresar a la página web staruml.io y en la parte superior derecha se selecciona la opción Download. </p>
+                        <div class="jumbotron color-1">
+                            <h3 class="color-t-1 text-center">Página de descarga de Star UML </h3><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img34.png">
+                        </div>
+                        <p>Esta aplicación puede ser usada en sistemas operativos Windows, Linux y Mac, sin embargo, la versión gratuita viene solo para Windows.</p>
+                        <p>Para comprender un poco más la herramienta y generar el primer documento de requerimientos por casos de uso se propone estudiar el siguiente caso y ver los tutoriales propuestos.</p>
+                        <p>Se retoma el caso del vendedor viajero.</p>
+                        <div class="quote my-3">
+                            <div class="quote__bar">
+                                <div class="quote__bar__icon"><img class="img-icon" src="assets/images/pages/ilustraciones/comilla1.svg" alt=""></div>
+                                <div class="quote__bar__hr"></div>
+                            </div>
+                            <div class="quote__text">
+                                <p class="mb-0">Se requería que el vendedor genera la factura de venta y la envíe a través del sistema externo. El vendedor puede realizar búsquedas de las facturas, adicionalmente puede consultar cuanto ha vendido y cuanto hace falta para completar la meta por último el vendedor listar los clientes de su ruta correspondiente en el viaje…</p>
+                            </div>
+                            <div class="quote__bar">
+                                <div class="quote__bar__hr"></div>
+                                <div class="quote__bar__icon"><img class="img-icon" src="assets/images/pages/ilustraciones/comilla2.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-3">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>3. El lenguaje unificado de modelado (UML)</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <div class="sub-ecored" id="31">
+                            <h2>3.1 Características</h2>
+                        </div>
+                        <div class="jumbotron color-1">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img35.png"></div>
+                                <div class="col">
+                                    <p>UML es un modelo propuesto como estándar de ISO, para la construcción de software orientado a objetos; consta de varios tipos de diagramas interconectados, dentro de los cuales se utilizan elementos del modelo, que sirven para representar diferentes aspectos de la estructura y la dinámica del software.</p>
+                                    <p>En este apartado se darán algunas pautas sobre el Lenguaje de Modelado Unificado (UML), el cual es utilizado para el desarrollo de proyectos, cuyo fin es conocer más a fondo los requerimientos del usuario y tener una mejor comunicación con el equipo de desarrollo. </p>
+                                </div>
+                            </div>
+                        </div><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img36.png">
+                        <p class="mt-5">UML es ante todo un lenguaje que se centra en la representación gráfica de un sistema. Este lenguaje indica cómo crear y leer los modelos, representando flujos de trabajo en elementos gráficos.</p>
+                        <p>Dentro de las características del lenguaje de modelado UML:</p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-11">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/ov1.svg"></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top"><strong>Visualizar:</strong> UML permite modelar de una forma gráfica un sistema de forma que otro lo puede entender.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/ov1.svg"></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top"><strong>Especificar:</strong> UML permite especificar cuáles son las características de un sistema antes de su desarrollo.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/ov1.svg"></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top"><strong>Construir:</strong> por medio de los modelos especificados se pueden construir los sistemas diseñados. </p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/ov1.svg"></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top"><strong>Documentar:</strong> los propios elementos gráficos sirven como documentación del sistema desarrollado, lo cual ayudará al mantenimiento de las soluciones conceptuales en el transcurso del tiempo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Un modelo UML está compuesto por tres tipos de bloques de construcción: </p>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-11">
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/ov1.svg"></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top"><strong>Elementos o partes:</strong> los elementos son abstracciones de cosas reales o ficticias (objetos, acciones, personas, sistemas) que pueden relacionarse. Tienen identidad y se distinguen entre ellos.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/ov1.svg"></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top"><strong>Relaciones o acciones:</strong> relacionan los elementos entre sí, hacen que los sistemas tengan funcionalidad, que adquieran vida.</p>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="list__item">
+                                        <div class="list__item__icon"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/ov1.svg"></div>
+                                    </div>
+                                    <div class="list__txt">
+                                        <p class="m-top"><strong>Diagramas o diseños:</strong> reflejan gráficamente el comportamiento y las relaciones entre los elementos. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Todo sistema puede ser representado gráficamente mediante modelos empleando UML el cual soporta sus diseños usando diagramas que facilitan el entendimiento, trazabilidad y comprensión entre sus componentes brindando claridad y calidad en la información presentada a los diversos actores involucrados en la distribución de información que requiere ser procesada por un sistema o flujo de trabajo propio de una organización empresarial. </p>
+                        <div class="sub-ecored mt-5" id="32">
+                            <h2>3.2 Diagramas tipo UML </h2>
+                        </div>
+                        <div class="jumbotron color-1">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img37.png"></div>
+                                <div class="col">
+                                    <p>En este lenguaje unificado, se toman en cuenta varios diagramas: casos de uso, diagrama de clases, de secuencia, estos son algunos de los más importantes dentro del proceso de desarrollo y que ayudan al analista y al usuario a unificar ideas de lo que se desea implementar. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-5">Un diagrama es la representación gráfica de un conjunto de elementos con sus relaciones, ofreciendo una vista del sistema a modelar. Para poder representar correctamente un sistema, UML ofrece varios tipos de diagramas que permiten visualizar un sistema desde varias perspectivas. UML incluye los siguientes diagramas:</p>
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Diagrama de clases</h3>
+                        </div>
+                        <p>Es el diagrama más común a la hora de describir el diseño de los sistemas orientados a objetos.</p>
+                        <p>El diagrama de clases muestra un conjunto de clases, atributos, operaciones, interfaces y sus relaciones. </p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img38.png">
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Diagrama de actividades</h3>
+                        </div>
+                        <p>El diagrama de actividades permite mostrar la secuencia de las acciones de varios objetos y seleccionar el orden en que se harán las cosas.</p>
+                        <p>Representa los procesos de negocios de alto nivel, incluidos el flujo de datos. También puede utilizarse para modelar lógica compleja y/o paralela dentro de un sistema.</p>
+                        <p>Un diagrama de actividades es la versión UML de un diagrama de flujo y se usan para analizar procesos.</p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img39.png">
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Diagrama de secuencias </h3>
+                        </div>
+                        <p>En el diagrama de secuencia se muestran las clases a lo largo de la parte superior y los mensajes enviados entre esas clases, modelando un solo flujo a través de los objetos del sistema. </p>
+                        <p>Un diagrama que representa una interacción, poniendo el foco en la secuencia de los mensajes que se intercambian, junto con sus correspondientes ocurrencias de eventos en las líneas de vida. </p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img40.png">
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Diagrama de casos de uso </h3>
+                        </div>
+                        <p>Un diagrama que muestra las relaciones entre los actores y el sujeto (sistema), y los casos de uso.</p>
+                        <p>Modela la funcionalidad del sistema según la percepción del usuario externo (actor) y las transacciones entre los actores y el sistema.</p>
+                        <p>Los diagramas de casos de uso son responsables principalmente de documentar los macrorrequisitos del sistema. Piense en los diagramas de casos de uso como la lista de las funcionalidades que debe proporcionar el sistema. </p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img41.png">
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Diagrama de componentes</h3>
+                        </div>
+                        <p>Representa los componentes que conforman una aplicación, sistema o empresa. Los componentes, sus relaciones, interacciones y sus interfaces públicas.</p>
+                        <p>En esta vista se modelan los componentes del sistema, a partir del cual se construye la aplicación. Son importantes para construir sistemas más grandes a partir de partes pequeñas. </p><img class="img-a mt-5 img-fluid" src="assets/images/pages/ilustraciones/img42.png">
+                        <div class="header-arrow py-4 mt-5">
+                            <h3>Diagrama de componentes </h3>
+                        </div>
+                        <p class="mt-5">Representa los componentes que conforman una aplicación, sistema o empresa. Los componentes, sus relaciones, interacciones y sus interfaces públicas.</p>
+                        <p>En esta vista se modelan los componentes del sistema, a partir del cual se construye la aplicación. Son importantes para construir sistemas más grandes a partir de partes pequeñas.</p>
+                        <table class="mt-5">
+                            <tr>
+                                <td class="table-1 text-center">Diagrama </td>
+                                <td class="table-1 text-center">Descripción</td>
+                            </tr>
+                            <tr>
+                                <td class="table-2">Diagrama de estado</td>
+                                <td class="table-2">Un diagrama de estados muestra el estado cambiante o dinámica de un objeto. Son importantes en el modelado de comportamiento de una interfaz, clase ante los eventos disparadores del objeto. <br> Cada estado modela un periodo de tiempo, durante la vida de un objeto. Cuando ocurre un evento, se puede desencadenar una transición que lleve el objeto a un nuevo estado.</td>
+                            </tr>
+                            <tr>
+                                <td class="table-3">Diagrama de despliegue físico</td>
+                                <td class="table-3">Un diagrama de despliegue físico muestra cómo y dónde se desplegará el sistema. Las máquinas físicas y los procesadores se representan como nodos y la construcción interna puede ser representada por nodos o artefactos embebidos. Como los artefactos se ubican en los nodos para modelar el despliegue del sistema, la ubicación es guiada por el uso de las especificaciones de despliegue. <br>En este tipo de diagrama se muestran los tipos de nodos del sistema y los tipos de componentes que contienen. Aquí el nodo se visualiza como un cubo. </td>
+                            </tr>
+                            <tr>
+                                <td class="table-2">Diagrama de objetos</td>
+                                <td class="table-2">Un diagrama que presenta los objetos y sus relaciones en un punto en el tiempo. Un diagrama de objetos se puede considerar como un caso especial de un diagrama de clases o un diagrama de comunicaciones. </td>
+                            </tr>
+                            <tr>
+                                <td class="table-3">Diagrama de estructura de composición</td>
+                                <td class="table-3">Representa la estructura interna de un clasificador (tal como una clase, un componente o un caso de uso), incluyendo los puntos de interacción de clasificador con otras partes del sistema. Un uso adicional que se puede dar a los diagramas de estructura compuesta es para mostrar las partes que colaboran, por ejemplo, en un caso de uso. </td>
+                            </tr>
+                            <tr>
+                                <td class="table-2">Diagrama de paquetes</td>
+                                <td class="table-2">Diagrama que permite la organización de elementos de modelado en paquetes y las dependencias entre ellos. Los usos más comunes para los diagramas de paquete son para organizar diagramas de casos de uso y diagramas de clase, a pesar de que el uso de los diagramas de paquete no es limitado a estos elementos UML. </td>
+                            </tr>
+                            <tr>
+                                <td class="table-3">Diagrama de comunicaciones</td>
+                                <td class="table-3">Diagrama que describen los mensajes que transmiten los objetos y muestran las asociaciones que existen entre las clases. Modela las interacciones entre objetos en términos de mensajes en secuencia. </td>
+                            </tr>
+                            <tr>
+                                <td class="table-2">Diagrama de tiempos</td>
+                                <td class="table-2">Diagrama utilizado para mostrar el cambio en el estado o valor de uno o más objetos en el tiempo o en su línea de vida, en respuesta a los eventos o estímulos recibidos.<br>Los eventos que se reciben se anotan, a medida que muestran cuándo se desea mostrar el evento que causa el cambio en la condición o en el estado. </td>
+                            </tr>
+                        </table>
+                        <div class="sub-ecored mt-5" id="33">
+                            <h2>3.3 Caso de estudio </h2>
+                        </div>
+                        <div class="jumbotron color-1 mt-5">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-auto"> <img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img43.png"></div>
+                                <div class="col">
+                                    <p>Para la creación de los diagramas, se plantea un caso de estudio donde podrá identificar varios ejemplos de cómo se desarrollan a partir de situaciones, por ello es necesario que realice una revisión detallada del material formativo. </p><a href="media/documentos/Caso_de_estudio.pdf"><img class="img-a img-fluid" src="assets/images/pages/ilustraciones/img44.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-4">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>4. Construcción de diagramas UML</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <div class="sub-ecored" id="41">
+                            <h2>4.1 Construcción de diagramas UML con herramienta DIA </h2>
+                        </div>
+                        <div class="row justify-content-center align-items-center mt-5">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C1">
+                                        <div class="anchorBtn__number">
+                                            <h3>V1</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Simbología y convenciones diagramas MER</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C2">
+                                        <div class="anchorBtn__number">
+                                            <h3>V2</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Diagrama entidades y relaciones</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C3">
+                                        <div class="anchorBtn__number">
+                                            <h3>V3</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Cardinalidad modelo entidad relación</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C4">
+                                        <div class="anchorBtn__number">
+                                            <h3>V4</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Representación entidades débiles</p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="anchorBtn"><a href="#C5">
+                                        <div class="anchorBtn__number">
+                                            <h3>V5</h3>
+                                        </div>
+                                        <div class="anchorBtn__body">
+                                            <p>Modelo entidad relación extendido </p>
+                                        </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="anchorHeader mt-5" id="C1">
+                            <div class="anchorHeader__number">
+                                <h3>V1</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Simbología y convenciones diagramas MER</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/lsvjnVg10hw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchorHeader mt-5" id="C2">
+                            <div class="anchorHeader__number">
+                                <h3>V2</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Diagrama entidades y relaciones</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/l7g-88Bssjo" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchorHeader mt-5" id="C3">
+                            <div class="anchorHeader__number">
+                                <h3>V3</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Cardinalidad modelo entidad relación</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/KcORNp2A3yg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchorHeader mt-5" id="C4">
+                            <div class="anchorHeader__number">
+                                <h3>V4</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Representación entidades débiles</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/WzPk_Cs1Cj8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchorHeader mt-5" id="C5">
+                            <div class="anchorHeader__number">
+                                <h3>V5</h3>
+                            </div>
+                            <div class="anchorHeader__body">
+                                <p>Modelo entidad relación extendido</p>
+                                <div class="anchorHeader__btn"><a href="#top"><i class="fa fa-caret-up"></a></i></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-11">
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/hyaC1DOSYE8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""> </iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p> <strong class="mr-2">Case:</strong>computer Aided Software Engineering. Creación de software asistido por computador.</p>
+                        <p><strong class="mr-2">Caso de uso:</strong>indica una función que el sistema debe proveer.</p>
+                        <p><strong class="mr-2">Clases:</strong>unidad básica que agrupa una colección de objetos.</p>
+                        <p><strong class="mr-2">Framework:</strong>conjunto de componentes o módulos de software que apoyan una o más etapas del proceso de desarrollo de software.</p>
+                        <p><strong class="mr-2">Interfaz de usuario:</strong>la interfaz de usuario es el medio con que el usuario puede comunicarse con una máquina, un equipo o una computadora, y comprende todos los puntos de contacto entre el usuario y el equipo. Normalmente suelen ser fáciles de entender y fáciles de accionar. </p>
+                        <p><strong class="mr-2">Mockup:</strong>dibujo a mano alzada que apoya el entendimiento de un problema, situación o requerimiento</p>
+                        <p><strong class="mr-2">SCRUM:</strong>es un proceso en el que se aplican de manera regular un conjunto de buenas prácticas para trabajar colaborativamente, en equipo, y obtener el mejor resultado posible de un proyecto. Estas prácticas se apoyan unas a otras y su selección tiene origen en un estudio de la manera de trabajar de equipos altamente productivos.</p>
+                        <p><strong class="mr-2">UML:</strong>unified Modeling Language, es un lenguaje estandarizado que se utiliza para visualizar los elementos de un sistema de software, compuesto por diagramas que representan elementos estáticos y dinámicos del sistema.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Material complementario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Nombre del documento o material</th>
+                                    <th>Tipo de material</th>
+                                    <th>Enlace del recurso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>UPM (2014.) Metodologías ágiles. El proceso SCRUM</td>
+                                    <td>Video</td>
+                                    <td> <a href="https://youtu.be/p9MYRrQEOGI" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Fernando Pereñiguez(2013) Ingeniería del Software II - Modelado de requisitos con UML (casos de uso) </td>
+                                    <td>Video</td>
+                                    <td> <a href="https://youtu.be/5ezWOj0k02k" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Fernando Pereñiguez.(2013).Tipos de relaciones en UML</td>
+                                    <td>Video</td>
+                                    <td> <a href="https://youtu.be/zvVzW4LzwTc" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Jorge Luis Agile. (2019). Scrum en menos de 7 minutos</td>
+                                    <td>Video</td>
+                                    <td> <a href="https://youtu.be/KT2aVXTYrUk" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Fernando Pereñiguez.(2013). Ingeniería del Software II - Modelado de clases con UML</td>
+                                    <td>Video</td>
+                                    <td> <a href="https://youtu.be/nFvUZ2Q0CFY" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span> Ver</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Fernando Pereñiguez(2013). Introducción al modelado del software.</td>
+                                    <td>Video</td>
+                                    <td> <a href="https://youtu.be/jDaEx7OCztY" target="_blank"><span class="fa fa-youtube-play" aria-hidden="true"></span> Ver </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Campderrich Falgueras, B. (2013). Ingeniería del software. Editorial UOC. <a class="ml-2" href="https://elibro-net.bdigital.sena.edu.co/es/ lc/senavirtual/titulos/56294" target="_blank">https://elibro-net.bdigital.sena.edu.co/es/ lc/senavirtual/titulos/56294</a></p>
+                        <hr>
+                        <p>E.Kendall, K. (2011). Análisis y diseño de sistemas. (8a. ed.) Pearson Educación. <a class="ml-2" href="http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=3285" target="_blank">http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=3285</a></p>
+                        <hr>
+                        <p>Fossati, M. (2017). Introducción a UML: Lenguaje para modelar objetos. <a class="ml-2" href="https://books.google.com.co/books?id=vrvbDgAAQBAJ&amp;printsec=frontcover&amp;dq=lenguaje+unificado+de+modelado&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwj8-ujc2f3sAhWBTd8KHeRxBLwQ6AEwAnoECAQQAg#v=onepage&amp;q&amp;f=false" target="_blank">https://books.google.com.co/books?id=vrvbDgAAQBAJ&amp;printsec=frontcover&amp;dq=lenguaje+unificado+de+modelado&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwj8-ujc2f3sAhWBTd8KHeRxBLwQ6AEwAnoECAQQAg#v=onepage&amp;q&amp;f=false</a></p>
+                        <hr>
+                        <p>Lainez, J. (2015). Desarrollo de Software Ágil: Extremme Programming y Scrum. 2ª Edición. <a class="ml-2" href="https://books.google.com.co/books?id=TxRpCwAAQBAJ&amp;printsec=frontcover&amp;dq=metodologias+agiles&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwjFyvT82v3sAhUQhOAKHYQICJgQ6AEwAHoECAQQAg#v=onepage&amp;q&amp;f=false" target="_blank">https://books.google.com.co/books?id=TxRpCwAAQBAJ&amp;printsec=frontcover&amp;dq=metodologias+agiles&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwjFyvT82v3sAhUQhOAKHYQICJgQ6AEwAHoECAQQAg#v=onepage&amp;q&amp;f=false</a></p>
+                        <hr>
+                        <p>Proyectos agiles.org. Qué es SCRUM. <a class="ml-2" href="https://proyectosagiles.org/que-es-scrum/" target="_blank">https://proyectosagiles.org/que-es-scrum/</a></p>
+                        <hr>
+                        <p>Ramos, D. (2016). Desarrollo de Software: Requisitos, Estimaciones y Análisis. 2 Edición. <a class="ml-2" href="https://books.google.com.co/books?id=tBaYCwAAQBAJ&amp;printsec=frontcover&amp;dq=requerimientos+funcionales+de+software&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwjEgaCv3P3sAhWCTd8KHQ0eCKYQ6AEwBXoECAYQAg#v=onepage&amp;q=requerimientos%20funcionales%20de%20software&amp;f=false" target="_blank">https://books.google.com.co/books?id=tBaYCwAAQBAJ&amp;printsec=frontcover&amp;dq=requerimientos+funcionales+de+software&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwjEgaCv3P3sAhWCTd8KHQ0eCKYQ6AEwBXoECAYQAg#v=onepage&amp;q=requerimientos%20funcionales%20de%20software&amp;f=false</a></p>
+                        <hr>
+                        <p>Sommerville, I. (2011). Ingeniería de software. (9a. ed.) Pearson Educación. <a class="ml-2" href="http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=3313" target="_blank">http://www.ebooks7-24.com.bdigital.sena.edu.co/?il=3313</a></p>
+                        <hr>
+                        <p>The Blokehead. (2016). Scrum - ¡Guía definitiva de prácticas ágiles esenciales de Scrum!. <a class="ml-2" href="https://books.google.com.co/books?id=T24eDQAAQBAJ&amp;printsec=frontcover&amp;dq=metodologias+agiles&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwjFyvT82v3sAhUQhOAKHYQICJgQ6AEwAnoECAYQAg#v=onepage&amp;q&amp;f=false" target="_blank">https://books.google.com.co/books?id=T24eDQAAQBAJ&amp;printsec=frontcover&amp;dq=metodologias+agiles&amp;hl=es&amp;sa=X&amp;ved=2ahUKEwjFyvT82v3sAhUQhOAKHYQICJgQ6AEwAnoECAYQAg#v=onepage&amp;q&amp;f=false</a></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzón</strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro industrial del diseño y la manufactura </span><br><span class="text-small">Regional Santander</span></p>
+                        <p class="footer-texto mb-2"><strong>Maryuri Agudelo Franco</strong><br /><span class="text-small">Diseñadora Instruccional<br /></span></p>
+                        <p class="footer-texto mb-2"><strong>Jesús Libardo Acero Cruz</strong><br /><span class="text-small">Diseñadora Instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de diseño y metrología</span><br><span class="text-small">Regional Distrito Capital</span></p>
+                        <p class="footer-texto mb-2"><strong>Julieth Paola Vital López </strong><br /><span class="text-small">Evaluador instruccional<br /></span><span class="text-small">Revisora de estilo<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Industria y la Comunicación Gráfica</span><br><span class="text-small">Regional Distrito Capital</span></p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto mb-2"><strong>Leyson Fabian Castaño Perez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto mb-2"> <strong>Adriana Rincón Avendaño</strong><br />
+                            <strong>Camilo Andrés Villamizar Lizcano</strong><br />
+                            <strong>Carlos Julián Ramírez Benítez</strong><br />
+                            <strong>Yazmin Rocio Figueroa Pacheco</strong><br />
+                            <strong>Yenny patricia Ulloa Villamizar</strong><br /><span class="text-small">Diseño web & producción audiovisual<br /></span></p>
+                        <p class="footer-texto mb-2"><strong>Edward Leonardo Pico Cabra</strong><br />
+                            <strong>Edgar Mauricio Cortes</strong><br />
+                            <strong>Jhon Jairo Urueta Alvarez</strong><br /><span class="text-small">Desarrollo Front-End<br /></span></p>
+                        <p class="footer-texto mb-2"><span class="text-small text-uppercase">Centro industrial del diseño y la manufactura </span><br><span class="text-small">Regional Santander</span></p>
+                        <h4 class="footer-subtitulo-2 mt-4">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"> <strong>Brayan Steven Pinto Diaz</strong><br />
+                            <strong>Edilson Laverde Molina</strong><br />
+                            <strong>Ricardo Alfonso Gonzalez Vargas</strong><br /><span class="text-small">Validación de recursos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO DE COMERCIO Y SERVICIOS</span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="d-flex flex-column justify-content-center"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>

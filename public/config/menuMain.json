@@ -1,0 +1,155 @@
+[
+  {
+    "icon": "fa fa-home",
+    "slug": "external",
+    "title": "Volver al inicio",
+    "path": "index.html"
+  },
+  {
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "intro",
+    "title": "Introducción",
+    "breadcrumb": ["Inicio","intro"],
+    "path": "pages/intro.html"
+  },
+  {
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "desarrollo",
+    "title": "1. DEsarrollo de software",
+    "breadcrumb": ["Inicio","desarrollo"],
+    "path": "pages/1-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "desarrollo",
+        "title": "1.1 Conceptos",
+        "anchor": "11"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "desarrollo",
+        "title": "1.2 Proceso de desarrollo de software",
+        "anchor": "12"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "desarrollo",
+        "title": "1.3 Metodologías tradicionales",
+        "anchor": "13"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "desarrollo",
+        "title": "1.4 Metodologías ágiles",
+        "anchor": "14"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "desarrollo",
+        "title": "1.5 Herramientas CASE",
+        "anchor": "15"
+      }
+    ]
+  },  
+  {
+    "id": 2,
+    "icon": "fa fa-file-text",
+    "slug": "requerimientos",
+    "title": "2. Requerimientos funcionales de software",
+    "breadcrumb": ["Inicio","requerimientos"],
+    "path": "pages/2-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "requerimientos",
+        "title": "2.1 Origen",
+        "anchor": "21"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "requerimientos",
+        "title": "2.2 Casos de uso",
+        "anchor": "22"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "requerimientos",
+        "title": "2.3 Notación",
+        "anchor": "23"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "requerimientos",
+        "title": "2.4 Documentación",
+        "anchor": "24"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "icon": "fa fa-file-text",
+    "slug": "uml",
+    "title": "3. El lenguaje unificado de modelado (UML)",
+    "breadcrumb": ["Inicio","uml"],
+    "path": "pages/3-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "uml",
+        "title": "3.1 Características",
+        "anchor": "31"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "uml",
+        "title": "3.2 Diagramas tipo UML",
+        "anchor": "32"
+      },
+      {
+        "icon": "fa fa-file-text",
+        "slug": "uml",
+        "title": "3.3 Caso de estudio",
+        "anchor": "33"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "icon": "fa fa-file-text",
+    "slug": "diagramas",
+    "title": "4. Construcción de diagramas UML",
+    "breadcrumb": ["Inicio","diagramas"],
+    "path": "pages/4-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-play-circle",
+        "slug": "diagramas",
+        "title": "4.1 Construcción de diagramas UML con herramienta DIA",
+        "anchor": "41"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "fa fa-file-text",
+    "slug": "evaluacion",
+    "title": "5. Evaluación del informe de requisitos",
+    "breadcrumb": ["Inicio","evaluacion"],
+    "path": "pages/5-tema.html",
+    "submenu": [
+      {
+        "icon": "fa fa-file-text",
+        "slug": "evaluacion",
+        "title": "5.1 Planeación",
+        "anchor": "51"
+      },{
+        "icon": "fa fa-file-text",
+        "slug": "evaluacion",
+        "title": "5.2 Administración del cambio ",
+        "anchor": "52"
+      }
+    ]
+  }
+] 
